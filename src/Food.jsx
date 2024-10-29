@@ -52,7 +52,7 @@ const Food = () => {
           {
             params: {
               apiKey: import.meta.env.VITE_API_KEY,
-              number: 2, // Fetch multiple random recipes
+              number:4, // Fetch multiple random recipes
             },
           }
         );
@@ -82,7 +82,7 @@ const Food = () => {
             apiKey: import.meta.env.VITE_API_KEY,
             query: searchRecipe,
             cuisine: selectedCuisine,
-            number: 2, // Fetch multiple recipes
+            number: 8, // Fetch multiple recipes
             addRecipeInformation: true,
           },
         }
@@ -130,6 +130,7 @@ const Food = () => {
 
   return (
     <div>
+      <Link to="/"> Home </Link>
       <input
         type="text"
         value={searchRecipe}

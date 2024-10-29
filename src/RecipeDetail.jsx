@@ -1,6 +1,6 @@
 // src/RecipeDetail.js
 
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, Link } from "react-router-dom";
 
 const RecipeDetail = () => {
   const recipe = useLoaderData();
@@ -23,6 +23,8 @@ const RecipeDetail = () => {
           <li key={index}> {`Step ${index + 1}: ${instructions}`} </li>
         ))}
       </ul>
+
+      <Link to="/search"> Back To Search </Link>
     </div>
   );
 };
